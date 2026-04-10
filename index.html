@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedSmart – Medicine Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">M</div>
+                    <div class="logo-text">
+                        <h1>MedSmart</h1>
+                        <p>Medicine Finder</p>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <span class="nav-tagline">Find cheaper alternatives</span>
+                    <button id="cartBtn" class="cart-btn" data-tooltip="Shopping Cart">
+                        🛒
+                        <span id="cartCount" class="cart-count">0</span>
+                    </button>
+                    <button id="profileBtn" class="profile-btn" data-tooltip="My Profile">👤</button>
+                    <select id="languageSwitcher" class="language-switcher">
+                        <option value="en">EN</option>
+                        <option value="hi">हिंदी</option>
+                    </select>
+                    <button id="accessBtn" class="access-btn" data-tooltip="Accessibility">♿</button>
+                    <button id="darkModeBtn" class="dark-mode-btn" data-tooltip="Toggle Dark Mode">🌙</button>
+                    <div class="help-icon" data-tooltip="Help & Support">?</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <div class="hero">
+                <h1 class="hero-title">
+                    Find Cheaper <span class="gradient-text">Medicines</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Discover affordable alternatives with the same composition. Save money without compromising on quality.
+                </p>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-container">
+                    <form id="searchForm" class="search-wrapper">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Search medicine (e.g. Crocin, Augmentin...)"
+                        >
+                        <button id="scanBtn" type="button" class="scan-btn">📷</button>
+                        <button id="searchBtn" type="submit" class="search-btn">Search</button>
+                    </form>
+                    <p class="search-hint">
+                        Try: <span class="hint-link">Crocin</span>, <span class="hint-link">Augmentin</span>, <span class="hint-link">Omeprazole</span>
+                    </p>
+
+                    <!-- Browse by Symptom -->
+                    <div class="symptom-section">
+                        <span class="symptom-label">Browse by Symptom:</span>
+                        <div class="symptom-buttons">
+                            <button class="symptom-btn" data-symptom="Fever">🤒 Fever</button>
+                            <button class="symptom-btn" data-symptom="Headache">🤕 Headache</button>
+                            <button class="symptom-btn" data-symptom="Acidity">🔥 Acidity</button>
+                            <button class="symptom-btn" data-symptom="Infection">🦠 Infection</button>
+                            <button class="symptom-btn" data-symptom="Diabetes">💉 Diabetes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loadingState" class="loading-state hidden">
+                <div class="spinner"></div>
+                <p>Searching medicines...</p>
+            </div>
+
+            <!-- Landing Content Wrapper -->
+            <div id="landingContent" class="landing-content">
+                <!-- Initial State -->
+                <div id="initialState" class="initial-state">
+                    <div class="empty-icon">💊</div>
+                    <h2>Start Your Search</h2>
+                    <p>Enter a medicine name above to find alternatives and compare prices</p>
+                </div>
+
+                <!-- Trending Searches -->
+                <section class="trending-section">
+                    <h3 class="section-title">🔥 Trending Medicines</h3>
+                    <div class="trending-pills">
+                        <button class="trending-pill" data-medicine="Paracetamol">Paracetamol</button>
+                        <button class="trending-pill" data-medicine="Amoxicillin">Amoxicillin</button>
+                        <button class="trending-pill" data-medicine="Atorvastatin">Atorvastatin</button>
+                        <button class="trending-pill" data-medicine="Metformin">Metformin</button>
+                        <button class="trending-pill" data-medicine="Omeprazole">Omeprazole</button>
+                    </div>
+                </section>
+
+                <!-- Why Choose Generics Feature Cards -->
+                <section class="features-section">
+                    <h3 class="section-title">Why Choose Generics?</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">💊</div>
+                            <h4>Same Active Ingredient</h4>
+                            <p>Generic medicines contain the exact same chemical composition as their brand-name counterparts, ensuring identical therapeutic effects.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">✅</div>
+                            <h4>CDSCO Approved</h4>
+                            <p>All generics undergo rigorous safety testing and meet the same quality standards set by India's Central Drugs Standard Control Organization.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💰</div>
+                            <h4>Up to 80% Cheaper</h4>
+                            <p>Without massive R&D and marketing costs, generic medicines eliminate brand markups while delivering the same healthcare benefits.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Accordion -->
+                <section class="faq-section">
+                    <h3 class="section-title">Frequently Asked Questions</h3>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary class="faq-question">Are generic medicines safe?</summary>
+                            <p class="faq-answer">Yes, generic medicines are required to have the same active ingredients, strength, dosage form, and safety profile as brand-name drugs. They undergo strict quality testing before approval.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary class="faq-question">Why are they so much cheaper?</summary>
+                            <p class="faq-answer">Generic medicines don't have the massive research, development, and marketing budgets that brand-name pharmaceutical companies spend. This allows them to offer the same medicine at a fraction of the cost.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary class="faq-question">Do I need a new prescription?</summary>
+                            <p class="faq-answer">In most cases, no. Pharmacists can substitute a generic equivalent unless your doctor has specifically written "Dispense as Written" on your prescription. Always consult your healthcare provider if unsure.</p>
+                        </details>
+                    </div>
+                </section>
+            </div>
+
+            <!-- No Results State -->
+            <div id="noResultsState" class="no-results-state hidden">
+                <div class="empty-icon">🔍</div>
+                <h2>No Results Found</h2>
+                <p>Try searching for a different medicine name or salt composition</p>
+            </div>
+
+            <!-- Search Results -->
+            <div id="searchResults" class="search-results hidden">
+                <h2 class="results-title">Found <span id="resultCount">0</span> medicine(s)</h2>
+                <button id="compareBtn" class="compare-btn hidden">Compare Selected (<span id="compareCount">0</span>)</button>
+                <div id="resultsGrid" class="results-grid"></div>
+            </div>
+
+            <!-- Accessibility Modal -->
+            <div id="accessModal" class="access-modal hidden">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Accessibility Settings</h2>
+                        <button id="closeAccess" class="close-modal">✕</button>
+                    </div>
+                    <div class="access-content">
+                        <div class="access-option">
+                            <label>Text-to-Speech</label>
+                            <button id="speakBtn" class="access-toggle">🔊 Enable</button>
+                        </div>
+                        <div class="access-option">
+                            <label>Font Size</label>
+                            <div class="font-size-options">
+                                <button class="font-btn" data-size="normal">A</button>
+                                <button class="font-btn" data-size="large">A+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Modal -->
+            <div id="profileModal" class="profile-modal hidden">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>My Profile</h2>
+                        <button id="closeProfile" class="close-modal">✕</button>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-header">
+                            <div class="profile-avatar">👤</div>
+                            <div class="profile-info">
+                                <h3 id="profileName">John Doe</h3>
+                                <p id="profileEmail">john@example.com</p>
+                            </div>
+                        </div>
+                        <div class="profile-tabs">
+                            <button class="profile-tab active" data-tab="saved">Saved Medicines</button>
+                            <button class="profile-tab" data-tab="history">Order History</button>
+                        </div>
+                        <div id="profileTabContent" class="profile-tab-content">
+                            <p class="empty-state">No saved medicines yet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Modal -->
+            <div id="cartModal" class="cart-modal hidden">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Your Cart</h2>
+                        <button id="closeCart" class="close-modal">✕</button>
+                    </div>
+                    <div id="cartItems" class="cart-items"></div>
+                    <div class="cart-footer">
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span id="cartTotal">₹0</span>
+                        </div>
+                        <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Modal -->
+            <div id="compareModal" class="compare-modal hidden">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Compare Medicines</h2>
+                        <button id="closeModal" class="close-modal">✕</button>
+                    </div>
+                    <div id="comparisonTable" class="comparison-table"></div>
+                </div>
+            </div>
+
+            <!-- Medicine Detail View -->
+            <div id="medicineDetail" class="medicine-detail hidden">
+                <div class="detail-actions">
+                    <button id="backBtn" class="back-btn">← Back to search</button>
+                    <button id="alertBtn" class="alert-btn">🔔 Set Price Alert</button>
+                    <button id="exportBtn" class="export-btn">📄 Export as PDF</button>
+                </div>
+                
+                <div class="medicine-card-large">
+                    <div class="medicine-header">
+                        <div class="medicine-info">
+                            <h2 id="detailName">Crocin 650mg</h2>
+                            <p id="detailManufacturer">GSK</p>
+                        </div>
+                        <div class="medicine-price-badge">
+                            <span id="detailPrice">₹25</span>
+                        </div>
+                    </div>
+                    <div class="medicine-salt">
+                        <span class="salt-label">Salt/Composition:</span>
+                        <span id="detailSalt">Paracetamol 650mg</span>
+                    </div>
+                    <button id="checkInteractions" class="interactions-btn">⚠️ Check Drug Interactions</button>
+                    <div id="interactionResult" class="interaction-result hidden"></div>
+                </div>
+
+                <div class="dosage-calculator-section">
+                    <button id="dosageToggle" class="accordion-toggle">💊 Dosage Calculator</button>
+                    <div id="dosageContent" class="accordion-content hidden">
+                        <div class="dosage-form">
+                            <label>Weight (kg):</label>
+                            <input type="number" id="weightInput" class="dosage-input" placeholder="Enter weight">
+                            <label>Age (years):</label>
+                            <input type="number" id="ageInput" class="dosage-input" placeholder="Enter age">
+                            <button id="calculateDosage" class="calculate-btn">Calculate Dosage</button>
+                            <div id="dosageResult" class="dosage-result"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-history-section">
+                    <h3>Price History (6 Months)</h3>
+                    <div id="priceChart" class="price-chart"></div>
+                </div>
+
+                <h3 class="alternatives-title">Cheaper Alternatives (<span id="altCount">0</span>)</h3>
+                <div class="filter-bar">
+                    <select id="priceSort" class="filter-select">
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                    </select>
+                    <select id="manufacturerFilter" class="filter-select">
+                        <option value="all">All Manufacturers</option>
+                    </select>
+                </div>
+                <div id="alternativesGrid" class="alternatives-grid"></div>
+
+                <div class="savings-banner">
+                    <div class="savings-content">
+                        <div class="savings-left">
+                            <h3>Maximum Savings</h3>
+                            <p>By choosing the cheapest alternative</p>
+                        </div>
+                        <div class="savings-right">
+                            <div class="savings-amount" id="maxSavings">₹13</div>
+                            <div class="savings-percent" id="savingsPercent">52% cheaper</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-section">
+                    <h3>Reviews & Ratings</h3>
+                    <div class="rating-summary">
+                        <div class="rating-score">4.5</div>
+                        <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                        <div class="rating-count">128 reviews</div>
+                    </div>
+                    <div id="reviewsList" class="reviews-list"></div>
+                    <button class="write-review-btn">Write a Review</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <button id="referBtn" class="refer-btn">🎁 Refer & Earn</button>
+            <p>© 2024 MedSmart. Built for hackathon demo.</p>
+            <p class="footer-disclaimer">Prices are for demonstration purposes only. Always consult a healthcare professional.</p>
+        </div>
+    </footer>
+
+    <!-- Referral Modal -->
+    <div id="referModal" class="refer-modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Refer & Earn</h2>
+                <button id="closeRefer" class="close-modal">✕</button>
+            </div>
+            <div class="refer-content">
+                <div class="refer-illustration">🎁</div>
+                <h3>Invite friends, earn rewards!</h3>
+                <p>Share your referral code and earn ₹100 for each friend who signs up.</p>
+                <div class="referral-code-box">
+                    <span class="referral-label">Your Referral Code:</span>
+                    <div class="referral-code">
+                        <span id="referralCodeText">MEDSMART2024</span>
+                        <button id="copyReferral" class="copy-btn">📋 Copy</button>
+                    </div>
+                </div>
+                <div class="share-options">
+                    <button class="share-option-btn">📱 WhatsApp</button>
+                    <button class="share-option-btn">✉️ Email</button>
+                    <button class="share-option-btn">🔗 Copy Link</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

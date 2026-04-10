@@ -6,10 +6,10 @@
     <title>MedSmart – Medicine Finder</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark-theme">
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
@@ -22,19 +22,18 @@
                     </div>
                 </div>
                 <div class="nav-right">
-                    <span class="nav-tagline">Find cheaper alternatives</span>
-                    <button id="cartBtn" class="cart-btn" data-tooltip="Shopping Cart">
-                        🛒
+                    <button id="cartBtn" class="cart-btn nav-text-btn" data-tooltip="Shopping Cart">
+                        <span>Cart</span>
                         <span id="cartCount" class="cart-count">0</span>
                     </button>
-                    <button id="profileBtn" class="profile-btn" data-tooltip="My Profile">👤</button>
+                    <button id="profileBtn" class="profile-btn nav-text-btn" data-tooltip="My Profile">Profile</button>
                     <select id="languageSwitcher" class="language-switcher">
                         <option value="en">EN</option>
                         <option value="hi">हिंदी</option>
                     </select>
-                    <button id="accessBtn" class="access-btn" data-tooltip="Accessibility">♿</button>
-                    <button id="darkModeBtn" class="dark-mode-btn" data-tooltip="Toggle Dark Mode">🌙</button>
-                    <div class="help-icon" data-tooltip="Help & Support">?</div>
+                    <button id="accessBtn" class="access-btn nav-text-btn" data-tooltip="Accessibility">Access</button>
+                    <button id="darkModeBtn" class="dark-mode-btn nav-text-btn" data-tooltip="Toggle Dark Mode">Theme</button>
+                    <button class="help-icon nav-text-btn" data-tooltip="Help & Support">Help</button>
                 </div>
             </div>
         </div>
@@ -74,11 +73,11 @@
                     <div class="symptom-section">
                         <span class="symptom-label">Browse by Symptom:</span>
                         <div class="symptom-buttons">
-                            <button class="symptom-btn" data-symptom="Fever">🤒 Fever</button>
-                            <button class="symptom-btn" data-symptom="Headache">🤕 Headache</button>
-                            <button class="symptom-btn" data-symptom="Acidity">🔥 Acidity</button>
-                            <button class="symptom-btn" data-symptom="Infection">🦠 Infection</button>
-                            <button class="symptom-btn" data-symptom="Diabetes">💉 Diabetes</button>
+                            <button class="symptom-btn" data-symptom="Fever">Fever</button>
+                            <button class="symptom-btn" data-symptom="Headache">Headache</button>
+                            <button class="symptom-btn" data-symptom="Acidity">Acidity</button>
+                            <button class="symptom-btn" data-symptom="Infection">Infection</button>
+                            <button class="symptom-btn" data-symptom="Diabetes">Diabetes</button>
                         </div>
                     </div>
                 </div>
@@ -94,14 +93,18 @@
             <div id="landingContent" class="landing-content">
                 <!-- Initial State -->
                 <div id="initialState" class="initial-state">
-                    <div class="empty-icon">💊</div>
+                    <div class="empty-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M2 12h20"></path>
+                        </svg>
+                    </div>
                     <h2>Start Your Search</h2>
                     <p>Enter a medicine name above to find alternatives and compare prices</p>
                 </div>
 
                 <!-- Trending Searches -->
                 <section class="trending-section">
-                    <h3 class="section-title">🔥 Trending Medicines</h3>
+                    <h3 class="section-title">Trending Medicines</h3>
                     <div class="trending-pills">
                         <button class="trending-pill" data-medicine="Paracetamol">Paracetamol</button>
                         <button class="trending-pill" data-medicine="Amoxicillin">Amoxicillin</button>
@@ -116,17 +119,31 @@
                     <h3 class="section-title">Why Choose Generics?</h3>
                     <div class="features-grid">
                         <div class="feature-card">
-                            <div class="feature-icon">💊</div>
+                            <div class="feature-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2v20M2 12h20"></path>
+                                </svg>
+                            </div>
                             <h4>Same Active Ingredient</h4>
                             <p>Generic medicines contain the exact same chemical composition as their brand-name counterparts, ensuring identical therapeutic effects.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">✅</div>
+                            <div class="feature-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
                             <h4>CDSCO Approved</h4>
                             <p>All generics undergo rigorous safety testing and meet the same quality standards set by India's Central Drugs Standard Control Organization.</p>
                         </div>
                         <div class="feature-card">
-                            <div class="feature-icon">💰</div>
+                            <div class="feature-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
                             <h4>Up to 80% Cheaper</h4>
                             <p>Without massive R&D and marketing costs, generic medicines eliminate brand markups while delivering the same healthcare benefits.</p>
                         </div>
@@ -201,7 +218,12 @@
                     </div>
                     <div class="profile-content">
                         <div class="profile-header">
-                            <div class="profile-avatar">👤</div>
+                            <div class="profile-avatar">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
                             <div class="profile-info">
                                 <h3 id="profileName">John Doe</h3>
                                 <p id="profileEmail">john@example.com</p>
@@ -271,12 +293,12 @@
                         <span class="salt-label">Salt/Composition:</span>
                         <span id="detailSalt">Paracetamol 650mg</span>
                     </div>
-                    <button id="checkInteractions" class="interactions-btn">⚠️ Check Drug Interactions</button>
+                    <button id="checkInteractions" class="interactions-btn">Check Drug Interactions</button>
                     <div id="interactionResult" class="interaction-result hidden"></div>
                 </div>
 
                 <div class="dosage-calculator-section">
-                    <button id="dosageToggle" class="accordion-toggle">💊 Dosage Calculator</button>
+                    <button id="dosageToggle" class="accordion-toggle">Dosage Calculator</button>
                     <div id="dosageContent" class="accordion-content hidden">
                         <div class="dosage-form">
                             <label>Weight (kg):</label>
@@ -336,7 +358,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <button id="referBtn" class="refer-btn">🎁 Refer & Earn</button>
+            <button id="referBtn" class="refer-btn">Refer & Earn</button>
             <p>© 2024 MedSmart. Built for hackathon demo.</p>
             <p class="footer-disclaimer">Prices are for demonstration purposes only. Always consult a healthcare professional.</p>
         </div>
@@ -351,20 +373,28 @@
                 <button id="closeRefer" class="close-modal">✕</button>
             </div>
             <div class="refer-content">
-                <div class="refer-illustration">🎁</div>
+                <div class="refer-illustration">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                        <rect x="2" y="7" width="20" height="5"></rect>
+                        <line x1="12" y1="22" x2="12" y2="7"></line>
+                        <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                        <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                    </svg>
+                </div>
                 <h3>Invite friends, earn rewards!</h3>
                 <p>Share your referral code and earn ₹100 for each friend who signs up.</p>
                 <div class="referral-code-box">
                     <span class="referral-label">Your Referral Code:</span>
                     <div class="referral-code">
                         <span id="referralCodeText">MEDSMART2024</span>
-                        <button id="copyReferral" class="copy-btn">📋 Copy</button>
+                        <button id="copyReferral" class="copy-btn">Copy</button>
                     </div>
                 </div>
                 <div class="share-options">
-                    <button class="share-option-btn">📱 WhatsApp</button>
-                    <button class="share-option-btn">✉️ Email</button>
-                    <button class="share-option-btn">🔗 Copy Link</button>
+                    <button class="share-option-btn">WhatsApp</button>
+                    <button class="share-option-btn">Email</button>
+                    <button class="share-option-btn">Copy Link</button>
                 </div>
             </div>
         </div>

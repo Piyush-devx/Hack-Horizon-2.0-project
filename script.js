@@ -150,16 +150,14 @@ let textToSpeechEnabled = false;
 
 // Dark Mode Toggle
 function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    const isDarkMode = document.body.classList.contains('dark-mode');
-    darkModeBtn.textContent = isDarkMode ? '☀️' : '🌙';
+    document.body.classList.toggle('dark-theme');
+    const isDarkMode = document.body.classList.contains('dark-theme');
     localStorage.setItem('darkMode', isDarkMode);
 }
 
-// Load dark mode preference
-if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
-    darkModeBtn.textContent = '☀️';
+// Load theme preference (default to dark mode)
+if (localStorage.getItem('darkMode') === 'false') {
+    document.body.classList.remove('dark-theme');
 }
 
 darkModeBtn.addEventListener('click', toggleDarkMode);

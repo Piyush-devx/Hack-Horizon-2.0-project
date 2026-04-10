@@ -13,7 +13,14 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">MedSmart</div>
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                    <path d="M12 8v4"/>
+                    <path d="M12 12v.01"/>
+                </svg>
+                MedSmart
+            </div>
             <div class="nav-links">
                 <button class="nav-link" data-sidebar="cart">Cart</button>
                 <button class="nav-link" data-sidebar="profile">Profile</button>
@@ -186,10 +193,54 @@
         </div>
     </div>
 
+    <!-- Refer & Earn Modal -->
+    <div class="modal-overlay" id="referModalOverlay">
+        <div class="modal refer-modal" id="referModal">
+            <div class="modal-header">
+                <h2 class="modal-title">Refer & Earn</h2>
+                <button class="modal-close" id="referModalClose">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="refer-content">
+                    <div class="refer-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="refer-title">Invite Friends, Save More!</h3>
+                    <p class="refer-desc">Share MedSmart with your friends and family. For every successful referral, you both get exclusive discounts on your next medicine purchase.</p>
+                    <div class="refer-code-box">
+                        <span class="refer-label">Your Referral Code</span>
+                        <div class="refer-code">
+                            <code id="referCode">MEDSMART2024</code>
+                            <button class="btn-copy" id="copyReferCode">Copy</button>
+                        </div>
+                    </div>
+                    <div class="refer-rewards">
+                        <div class="reward-item">
+                            <span class="reward-amount">₹50</span>
+                            <span class="reward-text">Per Referral</span>
+                        </div>
+                        <div class="reward-item">
+                            <span class="reward-amount">₹500</span>
+                            <span class="reward-text">Max Earnings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
-            <p class="footer-text">MedSmart - Making healthcare affordable for everyone</p>
+            <div class="footer-content">
+                <p class="footer-text">MedSmart - Making healthcare affordable for everyone</p>
+                <p class="footer-copyright">© 2024 MedSmart. Built for hackathon demo. Prices are for demonstration purposes only. Always consult a healthcare professional.</p>
+            </div>
             <button id="referEarnBtn" class="btn-secondary">Refer & Earn</button>
         </div>
     </footer>

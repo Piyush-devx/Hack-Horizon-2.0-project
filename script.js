@@ -115,6 +115,422 @@ const medicineDB = [
         salt: "Omeprazole",
         price: 32.00,
         symptoms: ["Acidity", "GERD", "Stomach Ulcer"]
+    },
+    {
+        id: 15,
+        name: "Dolo 650mg",
+        type: "Branded",
+        salt: "Paracetamol",
+        price: 38.50,
+        symptoms: ["Fever", "Headache", "Pain"]
+    },
+    {
+        id: 16,
+        name: "Calpol 650mg",
+        type: "Branded",
+        salt: "Paracetamol",
+        price: 42.00,
+        symptoms: ["Fever", "Headache", "Pain"]
+    },
+    {
+        id: 17,
+        name: "Azee 500mg",
+        type: "Branded",
+        salt: "Azithromycin",
+        price: 120.00,
+        symptoms: ["Infection", "Throat Infection", "Chest Infection"]
+    },
+    {
+        id: 18,
+        name: "Azithral 500mg",
+        type: "Generic",
+        salt: "Azithromycin",
+        price: 65.00,
+        symptoms: ["Infection", "Throat Infection", "Chest Infection"]
+    },
+    {
+        id: 19,
+        name: "Lipitor 10mg",
+        type: "Branded",
+        salt: "Atorvastatin",
+        price: 215.00,
+        symptoms: ["Cholesterol", "Heart Health"]
+    },
+    {
+        id: 20,
+        name: "Storvas 10mg",
+        type: "Generic",
+        salt: "Atorvastatin",
+        price: 58.00,
+        symptoms: ["Cholesterol", "Heart Health"]
+    },
+    {
+        id: 21,
+        name: "Ciplar 40mg",
+        type: "Generic",
+        salt: "Propranolol",
+        price: 28.50,
+        symptoms: ["Blood Pressure", "Anxiety", "Migraine"]
+    },
+    {
+        id: 22,
+        name: "Inderal 40mg",
+        type: "Branded",
+        salt: "Propranolol",
+        price: 89.00,
+        symptoms: ["Blood Pressure", "Anxiety", "Migraine"]
+    },
+    {
+        id: 23,
+        name: "Nise 100mg",
+        type: "Branded",
+        salt: "Nimesulide",
+        price: 56.00,
+        symptoms: ["Pain", "Fever", "Inflammation"]
+    },
+    {
+        id: 24,
+        name: "Nimprex 100mg",
+        type: "Generic",
+        salt: "Nimesulide",
+        price: 24.00,
+        symptoms: ["Pain", "Fever", "Inflammation"]
+    },
+    {
+        id: 25,
+        name: "Combiflam",
+        type: "Branded",
+        salt: "Ibuprofen + Paracetamol",
+        price: 45.00,
+        symptoms: ["Pain", "Fever", "Headache"]
+    },
+    {
+        id: 26,
+        name: "Ibupar Plus",
+        type: "Generic",
+        salt: "Ibuprofen + Paracetamol",
+        price: 19.50,
+        symptoms: ["Pain", "Fever", "Headache"]
+    },
+    {
+        id: 27,
+        name: "Zifi 200mg",
+        type: "Branded",
+        salt: "Cefixime",
+        price: 135.00,
+        symptoms: ["Infection", "Typhoid", "Urinary Tract Infection"]
+    },
+    {
+        id: 28,
+        name: "Taxim 200mg",
+        type: "Generic",
+        salt: "Cefixime",
+        price: 62.00,
+        symptoms: ["Infection", "Typhoid", "Urinary Tract Infection"]
+    },
+    {
+        id: 29,
+        name: "Cetzine 10mg",
+        type: "Branded",
+        salt: "Cetirizine",
+        price: 32.00,
+        symptoms: ["Allergy", "Cold", "Sneezing"]
+    },
+    {
+        id: 30,
+        name: "Alceti 10mg",
+        type: "Generic",
+        salt: "Cetirizine",
+        price: 14.00,
+        symptoms: ["Allergy", "Cold", "Sneezing"]
+    },
+    {
+        id: 31,
+        name: "Allegra 180mg",
+        type: "Branded",
+        salt: "Fexofenadine",
+        price: 165.00,
+        symptoms: ["Allergy", "Hay Fever", "Hives"]
+    },
+    {
+        id: 32,
+        name: "Fexy 180mg",
+        type: "Generic",
+        salt: "Fexofenadine",
+        price: 78.00,
+        symptoms: ["Allergy", "Hay Fever", "Hives"]
+    },
+    {
+        id: 33,
+        name: "Losar 50mg",
+        type: "Branded",
+        salt: "Losartan",
+        price: 95.00,
+        symptoms: ["Blood Pressure", "Hypertension"]
+    },
+    {
+        id: 34,
+        name: "Losacar 50mg",
+        type: "Generic",
+        salt: "Losartan",
+        price: 42.00,
+        symptoms: ["Blood Pressure", "Hypertension"]
+    },
+    {
+        id: 35,
+        name: "Volini Spray",
+        type: "Branded",
+        salt: "Diclofenac Diethylamine",
+        price: 165.00,
+        symptoms: ["Muscle Pain", "Sprain", "Back Pain"]
+    },
+    {
+        id: 36,
+        name: "Voveran Spray",
+        type: "Generic",
+        salt: "Diclofenac Diethylamine",
+        price: 89.00,
+        symptoms: ["Muscle Pain", "Sprain", "Back Pain"]
+    },
+    {
+        id: 37,
+        name: "Dynapar AQ",
+        type: "Branded",
+        salt: "Diclofenac Sodium",
+        price: 78.00,
+        symptoms: ["Pain", "Inflammation", "Arthritis"]
+    },
+    {
+        id: 38,
+        name: "Diclofen 50mg",
+        type: "Generic",
+        salt: "Diclofenac Sodium",
+        price: 28.00,
+        symptoms: ["Pain", "Inflammation", "Arthritis"]
+    },
+    {
+        id: 39,
+        name: "Domstal 10mg",
+        type: "Branded",
+        salt: "Domperidone",
+        price: 45.00,
+        symptoms: ["Nausea", "Vomiting", "Acidity"]
+    },
+    {
+        id: 40,
+        name: "Domperi 10mg",
+        type: "Generic",
+        salt: "Domperidone",
+        price: 18.00,
+        symptoms: ["Nausea", "Vomiting", "Acidity"]
+    },
+    {
+        id: 41,
+        name: "Rantac 150mg",
+        type: "Branded",
+        salt: "Ranitidine",
+        price: 35.50,
+        symptoms: ["Acidity", "GERD", "Heartburn"]
+    },
+    {
+        id: 42,
+        name: "Ranitin 150mg",
+        type: "Generic",
+        salt: "Ranitidine",
+        price: 15.00,
+        symptoms: ["Acidity", "GERD", "Heartburn"]
+    },
+    {
+        id: 43,
+        name: "Becosules",
+        type: "Branded",
+        salt: "Vitamin B Complex",
+        price: 52.00,
+        symptoms: ["Vitamin Deficiency", "Fatigue", "Immunity"]
+    },
+    {
+        id: 44,
+        name: "Becovit",
+        type: "Generic",
+        salt: "Vitamin B Complex",
+        price: 22.00,
+        symptoms: ["Vitamin Deficiency", "Fatigue", "Immunity"]
+    },
+    {
+        id: 45,
+        name: "Shelcal 500mg",
+        type: "Branded",
+        salt: "Calcium Carbonate + Vitamin D3",
+        price: 145.00,
+        symptoms: ["Calcium Deficiency", "Bone Health", "Osteoporosis"]
+    },
+    {
+        id: 46,
+        name: "Calcirol",
+        type: "Generic",
+        salt: "Calcium Carbonate + Vitamin D3",
+        price: 68.00,
+        symptoms: ["Calcium Deficiency", "Bone Health", "Osteoporosis"]
+    },
+    {
+        id: 47,
+        name: "Electral Powder",
+        type: "Branded",
+        salt: "Oral Rehydration Salts",
+        price: 28.00,
+        symptoms: ["Dehydration", "Diarrhea", "Heat Stroke"]
+    },
+    {
+        id: 48,
+        name: "ORS L",
+        type: "Generic",
+        salt: "Oral Rehydration Salts",
+        price: 12.00,
+        symptoms: ["Dehydration", "Diarrhea", "Heat Stroke"]
+    },
+    {
+        id: 49,
+        name: "Candid Cream",
+        type: "Branded",
+        salt: "Clotrimazole",
+        price: 95.00,
+        symptoms: ["Fungal Infection", "Ringworm", "Athletes Foot"]
+    },
+    {
+        id: 50,
+        name: "Clocip Cream",
+        type: "Generic",
+        salt: "Clotrimazole",
+        price: 42.00,
+        symptoms: ["Fungal Infection", "Ringworm", "Athletes Foot"]
+    },
+    {
+        id: 51,
+        name: "Betadine Ointment",
+        type: "Branded",
+        salt: "Povidone Iodine",
+        price: 75.00,
+        symptoms: ["Cuts", "Wounds", "Skin Infection"]
+    },
+    {
+        id: 52,
+        name: "Poviderm Ointment",
+        type: "Generic",
+        salt: "Povidone Iodine",
+        price: 32.00,
+        symptoms: ["Cuts", "Wounds", "Skin Infection"]
+    },
+    {
+        id: 53,
+        name: "Livogen",
+        type: "Branded",
+        salt: "Ferrous Fumarate + Folic Acid",
+        price: 68.00,
+        symptoms: ["Anemia", "Iron Deficiency", "Fatigue"]
+    },
+    {
+        id: 54,
+        name: "Autrin",
+        type: "Generic",
+        salt: "Ferrous Fumarate + Folic Acid",
+        price: 29.00,
+        symptoms: ["Anemia", "Iron Deficiency", "Fatigue"]
+    },
+    {
+        id: 55,
+        name: "Thyronorm 50mcg",
+        type: "Branded",
+        salt: "Levothyroxine",
+        price: 125.00,
+        symptoms: ["Hypothyroidism", "Thyroid"]
+    },
+    {
+        id: 56,
+        name: "Eltroxin 50mcg",
+        type: "Generic",
+        salt: "Levothyroxine",
+        price: 58.00,
+        symptoms: ["Hypothyroidism", "Thyroid"]
+    },
+    {
+        id: 57,
+        name: "Tenoric 50mg",
+        type: "Branded",
+        salt: "Atenolol + Chlorthalidone",
+        price: 85.00,
+        symptoms: ["Blood Pressure", "Hypertension"]
+    },
+    {
+        id: 58,
+        name: "Aten D",
+        type: "Generic",
+        salt: "Atenolol + Chlorthalidone",
+        price: 38.00,
+        symptoms: ["Blood Pressure", "Hypertension"]
+    },
+    {
+        id: 59,
+        name: "Zerodol P",
+        type: "Branded",
+        salt: "Aceclofenac + Paracetamol",
+        price: 72.00,
+        symptoms: ["Pain", "Fever", "Inflammation"]
+    },
+    {
+        id: 60,
+        name: "Aceclo Plus",
+        type: "Generic",
+        salt: "Aceclofenac + Paracetamol",
+        price: 32.00,
+        symptoms: ["Pain", "Fever", "Inflammation"]
+    },
+    {
+        id: 61,
+        name: "Pan 40mg",
+        type: "Branded",
+        salt: "Pantoprazole",
+        price: 85.00,
+        symptoms: ["Acidity", "GERD", "Stomach Ulcer"]
+    },
+    {
+        id: 62,
+        name: "Pantodac 40mg",
+        type: "Generic",
+        salt: "Pantoprazole",
+        price: 38.00,
+        symptoms: ["Acidity", "GERD", "Stomach Ulcer"]
+    },
+    {
+        id: 63,
+        name: "Zovirax Cream",
+        type: "Branded",
+        salt: "Acyclovir",
+        price: 145.00,
+        symptoms: ["Cold Sores", "Herpes", "Viral Infection"]
+    },
+    {
+        id: 64,
+        name: "Acivir Cream",
+        type: "Generic",
+        salt: "Acyclovir",
+        price: 68.00,
+        symptoms: ["Cold Sores", "Herpes", "Viral Infection"]
+    },
+    {
+        id: 65,
+        name: "Galvus Met 50/500",
+        type: "Branded",
+        salt: "Vildagliptin + Metformin",
+        price: 285.00,
+        symptoms: ["Diabetes", "Blood Sugar"]
+    },
+    {
+        id: 66,
+        name: "Vilmet 50/500",
+        type: "Generic",
+        salt: "Vildagliptin + Metformin",
+        price: 145.00,
+        symptoms: ["Diabetes", "Blood Sugar"]
     }
 ];
 
@@ -228,40 +644,146 @@ function renderMedicineResult(analysis) {
 }
 
 /**
- * Handle search execution
+ * Show search result popup modal
+ */
+function openSearchResultModal(query) {
+    const symptomMatch = analyzeBySymptom(query);
+    const medicineMatch = analyzeByMedicine(query);
+    
+    // If nothing found, show not found modal
+    if (!symptomMatch && !medicineMatch) {
+        modalTitle.textContent = 'Search Result';
+        modalContent.innerHTML = `
+            <div class="search-result-modal">
+                <div class="not-found-message">
+                    <div class="not-found-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </div>
+                    <h3>Medicine not available in the database</h3>
+                    <p>We couldn't find "${query}" in our database. Try one of these suggestions:</p>
+                    <div class="suggestion-list">
+                        <button class="suggestion-pill" onclick="quickSearch('Fever')">Fever</button>
+                        <button class="suggestion-pill" onclick="quickSearch('Headache')">Headache</button>
+                        <button class="suggestion-pill" onclick="quickSearch('Acidity')">Acidity</button>
+                        <button class="suggestion-pill" onclick="quickSearch('Paracetamol')">Paracetamol</button>
+                        <button class="suggestion-pill" onclick="quickSearch('Amoxicillin')">Amoxicillin</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        modalOverlay.classList.add('active');
+        return;
+    }
+    
+    let html = '<div class="search-result-modal"><div class="result-detail">';
+    
+    // Symptom result
+    if (symptomMatch) {
+        const allMeds = getAllBySymptom(query);
+        html += `
+            <div class="result-header">
+                <h3>Best medicine for ${query}</h3>
+                <p>Found ${allMeds.length} matching medicine${allMeds.length > 1 ? 's' : ''}</p>
+            </div>
+            <div class="result-card-large">
+                <span class="type-badge ${symptomMatch.type.toLowerCase()}">${symptomMatch.type}</span>
+                <h4>${symptomMatch.name}</h4>
+                <p class="salt">${symptomMatch.salt}</p>
+                <div class="price">₹${symptomMatch.price.toFixed(2)}</div>
+                <div class="symptoms">
+                    ${symptomMatch.symptoms.map(s => `<span class="symptom-tag">${s}</span>`).join('')}
+                </div>
+            </div>
+        `;
+        
+        // Show cheaper alternatives if available
+        if (allMeds.length > 1 && allMeds[0].id !== allMeds[allMeds.length - 1].id) {
+            const savings = allMeds[allMeds.length - 1].price - allMeds[0].price;
+            html += `
+                <div class="savings-banner">
+                    <h4>Save up to ₹${savings.toFixed(2)}</h4>
+                    <p>We found ${allMeds.length} alternatives for ${query}</p>
+                </div>
+                <button class="btn-primary" style="width: 100%; margin-top: 1rem;" onclick="openSymptomComparison('${query}')">View All Alternatives</button>
+            `;
+        }
+    }
+    
+    // Medicine result
+    if (medicineMatch) {
+        const { searched, cheapest, savings } = medicineMatch;
+        const isCheapest = searched.id === cheapest.id;
+        
+        if (symptomMatch) html += '<hr style="margin: 1.5rem 0; border-color: var(--border-color);">';
+        
+        html += `
+            <div class="result-header">
+                <h3>You searched for "${query}"</h3>
+                <p>Composition: ${searched.salt}</p>
+            </div>
+            <div class="result-card-large">
+                <span class="type-badge ${searched.type.toLowerCase()}">${searched.type}</span>
+                <h4>${searched.name}</h4>
+                <p class="salt">${searched.salt}</p>
+                <div class="price">₹${searched.price.toFixed(2)}</div>
+                <div class="symptoms">
+                    ${searched.symptoms.map(s => `<span class="symptom-tag">${s}</span>`).join('')}
+                </div>
+            </div>
+        `;
+        
+        if (!isCheapest) {
+            html += `
+                <div class="comparison-grid" style="margin-top: 1rem;">
+                    <div class="comparison-card">
+                        <span class="type-badge ${searched.type.toLowerCase()}">${searched.type}</span>
+                        <h4>${searched.name}</h4>
+                        <div class="price" style="font-size: 1.25rem;">₹${searched.price.toFixed(2)}</div>
+                    </div>
+                    <div class="comparison-card selected">
+                        <span class="type-badge ${cheapest.type.toLowerCase()}">${cheapest.type}</span>
+                        <h4>${cheapest.name}</h4>
+                        <div class="price" style="font-size: 1.25rem;">₹${cheapest.price.toFixed(2)}</div>
+                        <p class="savings">Save ₹${savings.toFixed(2)}</p>
+                    </div>
+                </div>
+                <button class="btn-primary" style="width: 100%; margin-top: 1rem;" onclick="openMedicineComparison(${searched.id})">View Full Comparison</button>
+            `;
+        } else {
+            html += `
+                <div class="savings-banner" style="background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);">
+                    <h4>Best Price Available!</h4>
+                    <p>This is already the cheapest option with this composition</p>
+                </div>
+            `;
+        }
+    }
+    
+    html += '</div></div>';
+    
+    modalTitle.textContent = 'Search Results';
+    modalContent.innerHTML = html;
+    modalOverlay.classList.add('active');
+}
+
+/**
+ * Quick search helper for suggestions
+ */
+function quickSearch(query) {
+    searchInput.value = query;
+    openSearchResultModal(query);
+}
+
+/**
+ * Handle search execution - now opens popup
  */
 function handleSearch() {
     const query = searchInput.value.trim();
     if (!query) return;
-    
-    // Check if query matches a symptom
-    const symptomMatch = analyzeBySymptom(query);
-    
-    // Check if query matches a medicine
-    const medicineMatch = analyzeByMedicine(query);
-    
-    let html = '';
-    
-    if (symptomMatch) {
-        html += renderSymptomResult(symptomMatch, query);
-    }
-    
-    if (medicineMatch) {
-        html += renderMedicineResult(medicineMatch);
-    }
-    
-    if (!symptomMatch && !medicineMatch) {
-        html = `
-            <div class="result-card">
-                <div class="result-info">
-                    <h3>No results found</h3>
-                    <p>Try searching for: Fever, Headache, Acidity, Infection, Paracetamol, Amoxicillin, or Atorvastatin</p>
-                </div>
-            </div>
-        `;
-    }
-    
-    resultsContainer.innerHTML = html;
+    openSearchResultModal(query);
 }
 
 // ============================================
@@ -538,15 +1060,43 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         sidebarOverlay.classList.remove('active');
         modalOverlay.classList.remove('active');
+        referModalOverlay.classList.remove('active');
     }
 });
 
 // ============================================
-// Refer & Earn - Smooth Scroll to Footer
+// Refer & Earn Modal
 // ============================================
 
+const referModalOverlay = document.getElementById('referModalOverlay');
+const referModalClose = document.getElementById('referModalClose');
+const copyReferCode = document.getElementById('copyReferCode');
+const referCode = document.getElementById('referCode');
+
 document.getElementById('referEarnBtn').addEventListener('click', () => {
-    document.querySelector('.footer').scrollIntoView({ behavior: 'smooth' });
+    referModalOverlay.classList.add('active');
+});
+
+referModalClose.addEventListener('click', () => {
+    referModalOverlay.classList.remove('active');
+});
+
+referModalOverlay.addEventListener('click', (e) => {
+    if (e.target === referModalOverlay) {
+        referModalOverlay.classList.remove('active');
+    }
+});
+
+// Copy referral code functionality
+copyReferCode.addEventListener('click', () => {
+    navigator.clipboard.writeText(referCode.textContent).then(() => {
+        copyReferCode.textContent = 'Copied!';
+        copyReferCode.classList.add('copied');
+        setTimeout(() => {
+            copyReferCode.textContent = 'Copy';
+            copyReferCode.classList.remove('copied');
+        }, 2000);
+    });
 });
 
 // ============================================
@@ -576,3 +1126,4 @@ document.querySelectorAll('.faq-question').forEach(question => {
 
 window.openSymptomComparison = openSymptomComparison;
 window.openMedicineComparison = openMedicineComparison;
+window.quickSearch = quickSearch;
